@@ -1,0 +1,17 @@
+name: Funktion vorschlagen
+description: Schlage eine neue Funktion oder Verbesserung vor
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Welches Problem loest das?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Gewuenschte Loesung
+      description: Beschreibe genau, was gemacht werden soll.
+    validations:
+      required: true
