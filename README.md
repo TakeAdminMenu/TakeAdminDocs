@@ -5,7 +5,7 @@
 <h1>TakeAdmin</h1>
 
 <p><strong>Das Admin-Menü für FiveM im klassischen GTA-Look.</strong><br>
-Schnell, sicher und vollständig auf Deutsch – mit ESX Legacy oder komplett standalone.</p>
+Schnell, sicher und vollständig auf Deutsch , mit ESX Legacy oder komplett standalone.</p>
 
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-3b82f6?style=for-the-badge" alt="Version 1.0.0">
@@ -15,9 +15,9 @@ Schnell, sicher und vollständig auf Deutsch – mit ESX Legacy oder komplett st
 </p>
 
 <p>
-  <a href="#-schnellstart"><strong>Schnellstart</strong></a> ·
-  <a href="#-funktionen"><strong>Funktionen</strong></a> ·
-  <a href="#-rechte"><strong>Rechte</strong></a> ·
+  <a href="#schnellstart"><strong>Schnellstart</strong></a> ·
+  <a href="#funktionen"><strong>Funktionen</strong></a> ·
+  <a href="#rechte"><strong>Rechte</strong></a> ·
   <a href="docs/README.md"><strong>Dokumentation</strong></a> ·
   <a href="../../issues"><strong>Fehler melden</strong></a>
 </p>
@@ -28,25 +28,25 @@ Schnell, sicher und vollständig auf Deutsch – mit ESX Legacy oder komplett st
 
 ## Warum TakeAdmin?
 
-Viele Admin-Menüs prüfen Rechte nur auf dem Client – und sind damit für Cheater ein offenes Tor. TakeAdmin geht einen anderen Weg: **Jede Aktion wird auf dem Server geprüft**, jeder Versuch protokolliert, und kein Teammitglied kann gegen einen höheren Rang vorgehen.
+Viele Admin-Menüs prüfen Rechte nur auf dem Client und sind damit für Cheater ein offenes Tor. TakeAdmin geht einen anderen Weg: **Jede Aktion wird auf dem Server geprüft**, jeder Versuch protokolliert, und kein Teammitglied kann gegen einen höheren Rang vorgehen.
 
-| | |
+| Merkmal | Beschreibung |
 | --- | --- |
-| 🛡️ **Serverseitig abgesichert** | Rechte, Ziel und Rang werden bei jeder Aktion zentral auf dem Server geprüft |
-| 🎮 **GTA-Look** | NUI-Menü im Stil des originalen Interaktionsmenüs, bedienbar mit Tastatur |
-| 🔌 **ESX oder Standalone** | Volle ESX-Legacy-Integration, läuft aber auch ohne Framework über ACE |
-| 📋 **Lückenlose Logs** | Alle Aktionen in der Server-Konsole und optional in Discord |
-| 🇩🇪 **Komplett auf Deutsch** | Oberfläche, Meldungen, Kommentare und Dokumentation |
+| **Serverseitig abgesichert** | Rechte, Ziel und Rang werden bei jeder Aktion zentral auf dem Server geprüft |
+| **GTA-Look** | NUI-Menü im Stil des originalen Interaktionsmenüs, bedienbar mit Tastatur |
+| **ESX oder Standalone** | Volle ESX-Legacy-Integration, läuft aber auch ohne Framework über ACE |
+| **Lückenlose Logs** | Alle Aktionen in der Server-Konsole und optional in Discord |
+| **Komplett auf Deutsch** | Oberfläche, Meldungen, Kommentare und Dokumentation |
 
 <br>
 
-## ✨ Funktionen
+## Funktionen
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**🛠️ Admin-Werkzeuge**
+**Admin-Werkzeuge**
 - Noclip und Godmode
 - Spectate von Spielern
 - Spieler-Blips auf der Karte
@@ -57,7 +57,7 @@ Viele Admin-Menüs prüfen Rechte nur auf dem Client – und sind damit für Che
 </td>
 <td width="50%" valign="top">
 
-**⚖️ Moderation**
+**Moderation**
 - Banns mit Speicherung in MySQL oder JSON
 - Verwarnungen mit Verlauf
 - Report-System für Spieler
@@ -70,7 +70,7 @@ Viele Admin-Menüs prüfen Rechte nur auf dem Client – und sind damit für Che
 <tr>
 <td width="50%" valign="top">
 
-**💼 ESX Legacy**
+**ESX Legacy**
 - Geld und Gruppen verwalten
 - Items vergeben²
 - Wiederbeleben³
@@ -80,7 +80,7 @@ Viele Admin-Menüs prüfen Rechte nur auf dem Client – und sind damit für Che
 </td>
 <td width="50%" valign="top">
 
-**🔐 Sicherheit**
+**Sicherheit**
 - Keine Aktion ohne Serverprüfung
 - Unerlaubte Zugriffe werden geloggt
 - Eingaben werden validiert
@@ -95,7 +95,7 @@ Viele Admin-Menüs prüfen Rechte nur auf dem Client – und sind damit für Che
 
 <br>
 
-## 🚀 Schnellstart
+## Schnellstart
 
 > [!IMPORTANT]
 > TakeAdmin benötigt **OneSync**. Ohne OneSync funktionieren Spectate, Teleport, Blips und das Aufräumen nicht.
@@ -122,25 +122,25 @@ ensure es_extended
 ensure TakeAdmin
 ```
 
-**4. Rechte vergeben** – siehe [Rechte](#-rechte). Fertig.
+**4. Rechte vergeben:** siehe [Rechte](#rechte). Fertig.
 
 <br>
 
-## 📦 Abhängigkeiten
+## Abhängigkeiten
 
 | Ressource | Status | Zweck |
 | --- | :---: | --- |
-| [OneSync](https://docs.fivem.net/docs/scripting-reference/onesync/) | ✅ Pflicht | Spectate, Teleport, Blips, Aufräumen |
-| [oxmysql](https://github.com/overextended/oxmysql) | ⭐ Empfohlen | Speicherung von Banns und Verwarnungen in MySQL |
-| [es_extended](https://github.com/esx-framework/esx_core) | ➖ Optional | ESX-Menü und Gruppen |
-| [ox_inventory](https://github.com/overextended/ox_inventory) | ➖ Optional | Items vergeben |
-| [screenshot-basic](https://github.com/citizenfx/screenshot-basic) | ➖ Optional | Screenshots von Spielern |
-| `esx_ambulancejob` | ➖ Optional | Wiederbeleben |
-| `esx_basicneeds` | ➖ Optional | Hunger und Durst |
+| [OneSync](https://docs.fivem.net/docs/scripting-reference/onesync/) | **Pflicht** | Spectate, Teleport, Blips, Aufräumen |
+| [oxmysql](https://github.com/overextended/oxmysql) | Empfohlen | Speicherung von Banns und Verwarnungen in MySQL |
+| [es_extended](https://github.com/esx-framework/esx_core) | Optional | ESX-Menü und Gruppen |
+| [ox_inventory](https://github.com/overextended/ox_inventory) | Optional | Items vergeben |
+| [screenshot-basic](https://github.com/citizenfx/screenshot-basic) | Optional | Screenshots von Spielern |
+| `esx_ambulancejob` | Optional | Wiederbeleben |
+| `esx_basicneeds` | Optional | Hunger und Durst |
 
 <br>
 
-## 🔑 Rechte
+## Rechte
 
 TakeAdmin arbeitet mit **Levels**. Jede Gruppe hat ein Level, jede Funktion ein Mindest-Level in `Config.Permissions`.
 
@@ -151,7 +151,7 @@ TakeAdmin arbeitet mit **Levels**. Jede Gruppe hat ein Level, jede Funktion ein 
 | `mod` | **50** | `takeadmin.mod` |
 | `support` | **20** | `takeadmin.support` |
 
-Das Level stammt aus der **ESX-Gruppe** oder aus **ACE** – gilt beides, zählt das höhere.
+Das Level stammt aus der **ESX-Gruppe** oder aus **ACE**. Gilt beides, zählt das höhere.
 
 <details>
 <summary><strong>Rechte per ACE vergeben</strong></summary>
@@ -182,25 +182,25 @@ Gib dem Spieler einfach die passende ESX-Gruppe, zum Beispiel `admin`. TakeAdmin
 
 <br>
 
-## ⌨️ Befehle
+## Befehle
 
 | Befehl | Ort | Beschreibung |
 | --- | :---: | --- |
-| `/report <Text>` | 🎮 Ingame | Meldung an das Team senden |
-| `/a <Text>` | 🎮 Ingame | Nachricht im Admin-Chat |
-| `ta_bans` | 🖥️ Konsole | Alle aktiven Banns anzeigen |
-| `ta_unban <ID>` | 🖥️ Konsole | Bann aufheben |
+| `/report <Text>` | Ingame | Meldung an das Team senden |
+| `/a <Text>` | Ingame | Nachricht im Admin-Chat |
+| `ta_bans` | Konsole | Alle aktiven Banns anzeigen |
+| `ta_unban <ID>` | Konsole | Bann aufheben |
 
 Taste und Befehl zum Öffnen des Menüs legst du in `config.lua` fest.
 
 <br>
 
-## ⚙️ Konfiguration
+## Konfiguration
 
 | Datei | Inhalt | Für Clients lesbar |
 | --- | --- | :---: |
-| `config.lua` | Gruppen, Rechte, Tasten, Listen | ⚠️ Ja |
-| `server/sv_config.lua` | Discord-Webhook und andere Geheimnisse | 🔒 Nein |
+| `config.lua` | Gruppen, Rechte, Tasten, Listen | Ja |
+| `server/sv_config.lua` | Discord-Webhook und andere Geheimnisse | Nein |
 
 > [!WARNING]
 > `config.lua` wird an alle Clients gesendet. Trage **niemals** Webhooks, Tokens oder Passwörter dort ein.
@@ -231,7 +231,7 @@ Taste und Befehl zum Öffnen des Menüs legst du in `config.lua` fest.
 
 <br>
 
-## ❓ Häufige Fragen
+## Häufige Fragen
 
 <details>
 <summary><strong>Das Menü öffnet sich nicht.</strong></summary>
@@ -254,7 +254,7 @@ OneSync ist nicht aktiv. Aktiviere es in txAdmin oder per <code>set onesync on</
 <details>
 <summary><strong>Die Oberfläche zeigt noch die alte Version.</strong></summary>
 <br>
-Verbinde dich einmal neu – der FiveM-Cache hält die alte NUI fest.
+Verbinde dich einmal neu, der FiveM-Cache hält die alte NUI fest.
 </details>
 
 <details>
@@ -271,7 +271,7 @@ Der Spieler hat einen höheren Rang als du. Das ist der Rang-Schutz und gewollt.
 
 <br>
 
-## 👨‍💻 Für Entwickler
+## Für Entwickler
 
 <details>
 <summary><strong>Projektstruktur</strong></summary>
@@ -362,15 +362,7 @@ Im Spiel mit `restart TakeAdmin` testen. Nach NUI-Änderungen einmal neu verbind
 
 <br>
 
-## 🗺️ Roadmap
-
-- [x] Version 1.0.0 mit ESX Legacy und Standalone
-- [x] Banns, Verwarnungen, Reports und Discord-Logs
-- [ ] Website auf GitHub Pages
-
-<br>
-
-## 🤝 Mitmachen
+## Mitmachen
 
 Beiträge sind willkommen. So gehst du vor:
 
@@ -379,14 +371,14 @@ Beiträge sind willkommen. So gehst du vor:
 3. Änderungen committen: `git commit -m "feat: meine Funktion"`
 4. Pushen und einen Pull Request öffnen
 
-Bitte beachte die Regeln unter [Für Entwickler](#-für-entwickler) und schreibe Texte und Kommentare auf Deutsch. Fehler und Ideen gerne als [Issue](../../issues).
+Bitte beachte die Regeln unter [Für Entwickler](#für-entwickler) und schreibe Texte und Kommentare auf Deutsch. Fehler und Ideen gerne als [Issue](../../issues).
 
 <br>
 
-## 📄 Lizenz
+## Lizenz
 
 TakeAdmin steht unter einer **eigenen Lizenz**.
-Kostenlos nutzbar auf eigenen Servern – Verkauf, Reupload und das Entfernen der Credits sind nicht gestattet.
+Kostenlos nutzbar auf eigenen Servern. Verkauf, Reupload und das Entfernen der Credits sind nicht gestattet.
 
 Die vollständigen Bedingungen stehen in der Datei [`LICENSE`](LICENSE).
 
@@ -398,6 +390,6 @@ Die vollständigen Bedingungen stehen in der Datei [`LICENSE`](LICENSE).
 
 **TakeAdmin** wird entwickelt von [**finnconradtc**](https://github.com/finnconradtc)
 
-Wenn dir TakeAdmin gefällt, lass gern einen ⭐ da.
+Wenn dir TakeAdmin gefällt, freue ich mich über einen Stern auf GitHub.
 
 </div>
