@@ -1,0 +1,39 @@
+name: Fehler melden
+description: Melde einen Fehler in TakeAdmin
+labels: ["type: bug", "status: needs info"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Was wurde gemacht / was passiert?
+      description: Beschreibe genau, was du getan hast und was dabei passiert ist.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Was sollte stattdessen passieren?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachstellen
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: Framework
+      placeholder: ESX Legacy / Standalone
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Konsolen-Fehler / Logs
+      render: text
