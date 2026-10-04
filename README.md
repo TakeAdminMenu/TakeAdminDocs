@@ -364,14 +364,49 @@ Im Spiel mit `restart TakeAdmin` testen. Nach NUI-Änderungen einmal neu verbind
 
 ## Mitmachen
 
-Beiträge sind willkommen. So gehst du vor:
+Beiträge sind willkommen, müssen aber die folgenden Regeln einhalten. Pull Requests, die dagegen verstoßen, werden ohne weitere Prüfung geschlossen.
+
+### Vor dem Start
+
+- **Erst ein Issue, dann Code.** Neue Funktionen und größere Änderungen müssen vorher als [Issue](../../issues) besprochen und freigegeben werden. Kleine Bugfixes und Tippfehler sind davon ausgenommen.
+- **Keine Duplikate.** Prüfe vorher, ob es zum Thema bereits ein Issue oder einen Pull Request gibt.
+- **Sicherheitslücken nicht öffentlich melden.** Lücken werden nicht als Issue gepostet, sondern direkt an [finnconradtc](https://github.com/finnconradtc) gemeldet.
+
+### Ablauf
 
 1. Repository forken
-2. Branch anlegen: `git checkout -b feat/meine-funktion`
-3. Änderungen committen: `git commit -m "feat: meine Funktion"`
-4. Pushen und einen Pull Request öffnen
+2. Branch vom aktuellen `main` anlegen, benannt nach Art der Änderung:
+   `feat/…` für Funktionen, `fix/…` für Fehler, `docs/…` für Doku, `refactor/…` für Umbauten
+3. Änderungen nach [Conventional Commits](https://www.conventionalcommits.org/de/) committen, z. B. `fix: Teleport bei leerem Ziel abfangen`
+4. Pull Request gegen `main` öffnen und die Vorlage vollständig ausfüllen: Was wurde geändert, warum, und wie wurde getestet
 
-Bitte beachte die Regeln unter [Für Entwickler](#für-entwickler) und schreibe Texte und Kommentare auf Deutsch. Fehler und Ideen gerne als [Issue](../../issues).
+### Pflichtregeln für Code
+
+- **Ein Pull Request, ein Thema.** Keine Sammel-PRs mit mehreren unabhängigen Änderungen.
+- **Nie dem Client vertrauen.** Jede Aktion mit Wirkung läuft über eine serverseitige `Action(...)` mit Rechteprüfung. PRs mit reiner Client-Prüfung werden abgelehnt.
+- **Eingaben validieren.** Alle Daten vom Client werden auf Typ und Länge geprüft (`tonumber`, `Trim(s, max)`).
+- **Alles protokollieren.** Jede Admin-Aktion wird mit `Log(...)` geloggt.
+- **Rechte eintragen.** Neue Funktionen bekommen ein eigenes Recht in `Config.Permissions` mit sinnvollem Level.
+- **Keine Geheimnisse im Shared-Code.** Webhooks, Tokens und Schlüssel gehören ausschließlich in `server/sv_config.lua`.
+- **Bestehenden Stil übernehmen.** Kein Umformatieren von Code, der nicht zur Änderung gehört.
+- **Keine neuen Pflicht-Abhängigkeiten** ohne vorherige Absprache. Optionale Ressourcen müssen sauber erkannt werden, TakeAdmin muss ohne sie weiterlaufen.
+- **Keine Breaking Changes** an `config.lua`, Datenbanktabellen oder Befehlen ohne Absprache im Issue.
+- **Sprache Deutsch.** Texte im Spiel, Kommentare und Doku werden auf Deutsch geschrieben.
+
+### Vor dem Pull Request prüfen
+
+- [ ] `node --check html/script.js` läuft ohne Fehler
+- [ ] Geänderte Lua-Dateien sind syntaktisch korrekt
+- [ ] Im Spiel getestet, mit und ohne ESX, falls die Änderung ESX betrifft
+- [ ] Rang-Schutz und Rechte geprüft, auch mit einer niedrigeren Gruppe
+- [ ] Neue Dateien in `fxmanifest.lua` eingetragen
+- [ ] README und `docs/` aktualisiert, falls sich Funktionen, Rechte, Befehle oder Konfiguration ändern
+
+Ungetesteter Code, auch automatisch generierter, wird nicht angenommen.
+
+### Rechtliches
+
+Mit dem Einreichen eines Pull Requests erklärst du dich mit den Bedingungen zu Beiträgen in der [`LICENSE`](LICENSE) einverstanden. Ein Anspruch auf Übernahme besteht nicht.
 
 <br>
 
